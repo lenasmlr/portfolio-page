@@ -1,0 +1,109 @@
+/* Shared colours and default typography. */
+:root {
+  --color-background: #1d1d1b;
+  --color-text: #e7e7dd;
+  --color-decoration: #68525c;
+
+  font-family: 'Instrument Sans', Arial, sans-serif;
+  font-size: 100%;
+  font-weight: 500;
+  line-height: 1.5;
+
+  color: var(--color-text);
+  background-color: var(--color-background);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Include padding and borders within an element's width. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove the browser's default outer spacing. */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  font-family: 'Instrument Sans', Arial, sans-serif;
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+/* Let the React application fill the available width. */
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Remove default text margins.
+   We will set the spacing for each layout in App.css. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+/* All headings use the same font family. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Instrument Sans', Arial, sans-serif;
+  line-height: 1.05;
+}
+
+/* Body text: 16px at the default browser font size. */
+p {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+/* Links use the surrounding text colour.
+   Individual hover and active styles go in App.css. */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Make keyboard focus visible against the dark background. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 5px;
+}
+
+/* Prevent images from exceeding their container width. */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Form controls use the website's typography. */
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
